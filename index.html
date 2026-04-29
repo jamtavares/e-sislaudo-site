@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>e-SISLAUDO | Plataforma Técnica de Avaliação Rural</title>
+  <meta name="description" content="e-SISLAUDO: plataforma técnica para avaliação rural, integração CAR/SICAR, bases VTN, governança prudencial e geração de laudos." />
+  <meta name="keywords" content="laudo rural, avaliação rural, CAR, SICAR, VTN, avaliação de imóveis rurais, laudo técnico rural, valor da terra nua" />
+  <meta name="author" content="e-SISLAUDO" />
+  <meta property="og:title" content="e-SISLAUDO | Avaliação Rural com Governança Prudencial" />
+  <meta property="og:description" content="Integração de CAR/SICAR, bases VTN, mercado observado e geração técnica de laudos rurais." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7faf8; --surface:#ffffff; --surface2:#eef7f2; --text:#10231c; --muted:#5b6b64;
+      --brand:#0f766e; --brand2:#14532d; --accent:#b45309; --line:#d9e6de;
+      --shadow:0 20px 50px rgba(15, 118, 110, .12); --radius:22px; --max:1180px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);
+      background:radial-gradient(circle at top left,rgba(15,118,110,.14),transparent 34rem),linear-gradient(180deg,#fbfffd 0%,var(--bg) 100%);line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(18px);background:rgba(247,250,248,.82);border-bottom:1px solid rgba(217,230,222,.9)}
+    .nav{display:flex;align-items:center;justify-content:space-between;min-height:74px;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em}
+    .logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;display:grid;place-items:center;font-weight:800;box-shadow:0 12px 28px rgba(15,118,110,.24)}
+    .brand small{display:block;font-weight:600;color:var(--muted);letter-spacing:0;font-size:11px;margin-top:-4px}
+    nav ul{display:flex;align-items:center;gap:22px;list-style:none;margin:0;padding:0}
+    nav a{font-size:14px;color:#29443a;font-weight:600} nav a:hover{color:var(--brand)}
+    .actions{display:flex;align-items:center;gap:10px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:999px;font-weight:750;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.2s ease;white-space:nowrap}
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 12px 24px rgba(15,118,110,.22)} .btn-primary:hover{transform:translateY(-1px);background:#0d665f}
+    .btn-soft{background:#fff;color:var(--brand);border-color:var(--line)} .btn-soft:hover{border-color:var(--brand);transform:translateY(-1px)}
+    .mobile-menu{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 11px}
+    .hero{padding:76px 0 48px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e7f6f2;color:#0f5f58;border:1px solid #ccebe4;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:700}
+    h1{font-size:clamp(38px,5vw,68px);line-height:1.02;margin:20px 0 18px;letter-spacing:-.06em}
+    .lead{font-size:19px;color:var(--muted);max-width:680px;margin:0 0 26px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0}
+    .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px;max-width:680px}
+    .trust div{background:rgba(255,255,255,.78);border:1px solid var(--line);padding:14px;border-radius:18px;font-size:13px;color:var(--muted)}
+    .trust strong{display:block;color:var(--text);font-size:18px;margin-bottom:2px}
+    .mock{background:rgba(255,255,255,.74);border:1px solid var(--line);border-radius:30px;padding:18px;box-shadow:var(--shadow)}
+    .mock-screen{background:linear-gradient(180deg,#fff,#f4fbf7);border:1px solid #dceae2;border-radius:22px;overflow:hidden}
+    .mock-top{display:flex;gap:7px;padding:14px;border-bottom:1px solid var(--line)}.dot{width:11px;height:11px;border-radius:50%;background:#d1d5db}
+    .dash{padding:18px}.metric-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.metric{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}
+    .metric span{font-size:12px;color:var(--muted);display:block}.metric strong{font-size:21px;display:block;margin-top:3px;color:#12332a}
+    .map{margin-top:12px;height:170px;border-radius:20px;background:linear-gradient(115deg,rgba(15,118,110,.2),transparent 50%),repeating-linear-gradient(45deg,#dff0e8 0 14px,#eef8f3 14px 28px);border:1px solid #d0e7dc;position:relative;overflow:hidden}
+    .map:before{content:"";position:absolute;inset:35px 60px 30px 50px;border:4px solid var(--brand);border-radius:45% 35% 50% 35%;background:rgba(15,118,110,.08)}
+    .map:after{content:"CAR • APP • RL • Uso consolidado";position:absolute;left:16px;bottom:14px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:12px;font-weight:700;color:#18483d}
+    section{padding:72px 0}.section-head{max-width:760px;margin-bottom:34px}.section-head h2{font-size:clamp(28px,3vw,42px);line-height:1.12;margin:0 0 12px;letter-spacing:-.04em}.section-head p{color:var(--muted);font-size:17px;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 10px 30px rgba(16,35,28,.04)}
+    .icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--surface2);font-size:22px;margin-bottom:14px}.card h3{margin:0 0 8px;font-size:18px;letter-spacing:-.02em}.card p{margin:0;color:var(--muted);font-size:14px}
+    .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;counter-reset:step}.step{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px;position:relative}
+    .step:before{counter-increment:step;content:counter(step);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:800;font-size:13px;margin-bottom:14px}
+    .step h3{font-size:16px;margin:0 0 8px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .split{display:grid;grid-template-columns:.95fr 1.05fr;gap:32px;align-items:start}.panel{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+    .list{display:grid;gap:14px}.list-item{display:flex;gap:13px;align-items:flex-start}.check{width:24px;height:24px;border-radius:50%;background:#dcfce7;color:#166534;display:grid;place-items:center;font-weight:900;flex:0 0 auto}.list-item strong{display:block;margin-bottom:2px}.list-item span{color:var(--muted);font-size:14px}
+    .tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tech{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.tech strong{display:block;margin-bottom:6px;color:#12332a}.tech span{color:var(--muted);font-size:14px}
+    .video-box{min-height:360px;border-radius:30px;border:1px solid #cce5dc;background:radial-gradient(circle at 30% 15%,rgba(180,83,9,.2),transparent 20rem),linear-gradient(135deg,#12332a,#0f766e);color:#fff;display:grid;place-items:center;text-align:center;padding:32px;position:relative;overflow:hidden}
+    .play{width:78px;height:78px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;margin:0 auto 18px;border:1px solid rgba(255,255,255,.35)}.play span{margin-left:5px;font-size:32px}.video-box h3{font-size:28px;margin:0 0 10px}.video-box p{margin:0;opacity:.86;max-width:520px}
+    .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.article{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}.article small{color:var(--brand);font-weight:800;text-transform:uppercase;font-size:11px;letter-spacing:.08em}.article h3{margin:10px 0 8px;font-size:19px;line-height:1.25}.article p{color:var(--muted);font-size:14px;margin:0}
+    .cta{background:linear-gradient(135deg,#0f766e,#14532d);color:#fff;border-radius:34px;padding:44px;display:grid;grid-template-columns:1.3fr .7fr;gap:22px;align-items:center;box-shadow:var(--shadow)}.cta h2{margin:0 0 8px;font-size:34px;letter-spacing:-.04em}.cta p{opacity:.88;margin:0}.cta .btn{background:#fff;color:#0f766e}
+    footer{padding:38px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}.foot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    @media(max-width:980px){.hero-grid,.split,.cta{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.tech-grid,.articles{grid-template-columns:1fr}nav ul{display:none}.mobile-menu{display:inline-flex}.trust{grid-template-columns:1fr}}
+    @media(max-width:560px){.cards,.steps{grid-template-columns:1fr}.actions .btn-soft{display:none}.hero{padding-top:46px}.cta{padding:28px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio"><div class="logo">eS</div><div>e-SISLAUDO<small>Laudos • Valoração • Governança</small></div></a>
+    <nav><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#publicos">Para quem é</a></li><li><a href="#metodologia">Metodologia</a></li><li><a href="#conteudos">Conteúdos</a></li><li><a href="#video">Vídeo</a></li></ul></nav>
+    <div class="actions"><a class="btn btn-soft" href="#contato">Contato</a><a class="btn btn-primary" href="https://jamtavares-e-sislaudo-app-iys9ll.streamlit.app/" target="_blank" rel="noopener">Entrar no sistema</a><button class="mobile-menu">☰</button></div>
+  </div>
+</header>
+<main id="inicio">
+  <section class="hero"><div class="wrap hero-grid"><div><span class="eyebrow">🌾 Avaliação rural com inteligência territorial</span><h1>Laudos rurais com base técnica, rastreabilidade e governança prudencial.</h1><p class="lead">O e-SISLAUDO integra informações do CAR/SICAR, bases de VTN, mercado observado e critérios de governança para apoiar a valoração técnica de imóveis rurais e a geração estruturada de laudos.</p><div class="hero-actions"><a class="btn btn-primary" href="https://jamtavares-e-sislaudo-app-iys9ll.streamlit.app/" target="_blank" rel="noopener">Entrar no sistema</a><a class="btn btn-soft" href="#como-funciona">Ver a jornada</a></div><div class="trust"><div><strong>CAR/SICAR</strong> Leitura territorial e apoio cadastral.</div><div><strong>VTN + Mercado</strong> Comparação multi-base para decisão.</div><div><strong>DOCX</strong> Geração documental estruturada.</div></div></div><div class="mock"><div class="mock-screen"><div class="mock-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="dash"><div class="metric-row"><div class="metric"><span>Base mandante</span><strong>VTN oficial</strong></div><div class="metric"><span>VRG prudencial</span><strong>R$ 0,30 mi</strong></div><div class="metric"><span>Mercado observado</span><strong>03C / 03D</strong></div><div class="metric"><span>Laudo</span><strong>Pronto</strong></div></div><div class="map"></div></div></div></div></div></section>
+  <section id="publicos"><div class="wrap"><div class="section-head"><h2>Construído para quem precisa transformar dados rurais em decisão técnica.</h2><p>Do produtor ao avaliador, o sistema organiza a jornada de análise territorial, valoração e emissão documental.</p></div><div class="cards"><article class="card"><div class="icon">🤝</div><h3>Sindicatos e associações</h3><p>Escala para analisar grupos de imóveis, organizar CARs e apoiar demandas coletivas de regularização e valoração.</p></article><article class="card"><div class="icon">🌱</div><h3>Produtores rurais</h3><p>Entendimento objetivo da propriedade, das áreas, restrições e potencial de uso técnico do laudo.</p></article><article class="card"><div class="icon">📐</div><h3>Engenheiros e avaliadores</h3><p>Apoio à produtividade técnica, padronização de peças e rastreabilidade das bases adotadas.</p></article><article class="card"><div class="icon">🏦</div><h3>Instituições e parceiros</h3><p>Uso em jornadas institucionais, contratos, triagens e governança prudencial para decisões estruturadas.</p></article></div></div></section>
+  <section id="como-funciona"><div class="wrap"><div class="section-head"><h2>Uma jornada simples: do CAR ao laudo.</h2><p>O fluxo foi desenhado para reduzir atrito, explicar cada etapa e entregar uma peça técnica rastreável.</p></div><div class="steps"><div class="step"><h3>Baixe os dados</h3><p>Obtenha CAR, demonstrativo e documentos territoriais de apoio.</p></div><div class="step"><h3>Envie ao sistema</h3><p>Suba os arquivos na plataforma e inicie a leitura técnica.</p></div><div class="step"><h3>Veja as camadas</h3><p>Áreas, APP, Reserva Legal, restrições e indicadores são organizados.</p></div><div class="step"><h3>Escolha a base</h3><p>Compare VTN, mercado observado, BASEIMOV, PLUS e multi-base.</p></div><div class="step"><h3>Gere o laudo</h3><p>Documento estruturado em DOCX para uso técnico e institucional.</p></div></div></div></section>
+  <section id="metodologia"><div class="wrap split"><div class="section-head"><h2>Metodologia com clareza para decisão.</h2><p>A plataforma separa base econômica, base prudencial e homologação metodológica, evitando dupla verdade e mantendo coerência entre tela, cálculo e documento.</p></div><div class="panel"><div class="list"><div class="list-item"><div class="check">✓</div><div><strong>Base mandante ABNT da sessão</strong><span>Define a referência principal que orienta o VTN, VRG, quadro resumo e documento.</span></div></div><div class="list-item"><div class="check">✓</div><div><strong>Governança prudencial</strong><span>Organiza alertas, ressalvas, homologação e leitura executiva da emissão.</span></div></div><div class="list-item"><div class="check">✓</div><div><strong>Comparação multi-base</strong><span>Permite visualizar diferenças entre VTN oficial, mercado observado, BASEIMOV, PLUS e composição.</span></div></div><div class="list-item"><div class="check">✓</div><div><strong>Geração documental</strong><span>Consolida as escolhas em laudo técnico com trilha de cálculo e coerência narrativa.</span></div></div></div></div></div><div class="wrap" style="margin-top:22px"><div class="tech-grid"><div class="tech"><strong>VTN</strong><span>Valor da Terra Nua como eixo econômico da avaliação rural.</span></div><div class="tech"><strong>VRG</strong><span>Régua prudencial de garantia com leitura conservadora de valor.</span></div><div class="tech"><strong>03C / 03D</strong><span>Camada de qualidade, homologação e decisão técnica de emissão.</span></div></div></div></section>
+  <section id="video"><div class="wrap split"><div class="video-box"><div><div class="play"><span>▶</span></div><h3>Vídeo da jornada</h3><p>Espaço reservado para um vídeo de 60 a 90 segundos mostrando CAR, demonstrativo, upload, camadas, bases e laudo final.</p></div></div><div><div class="section-head" style="margin-bottom:22px"><h2>Mostre a plataforma como uma jornada visual.</h2><p>O vídeo deve ser didático, com personagens ou animações, mostrando o caminho do dado até o documento pronto.</p></div><div class="panel"><div class="list"><div class="list-item"><div class="check">1</div><div><strong>Baixar CAR e demonstrativo</strong><span>Mostrar o produtor ou técnico coletando os insumos.</span></div></div><div class="list-item"><div class="check">2</div><div><strong>Subir no e-SISLAUDO</strong><span>Upload simples e início do processamento.</span></div></div><div class="list-item"><div class="check">3</div><div><strong>Camadas e bases</strong><span>Visualizar áreas, restrições e base mandante.</span></div></div><div class="list-item"><div class="check">4</div><div><strong>Laudo em esteira</strong><span>Documento final saindo pronto para uso técnico.</span></div></div></div></div></div></div></section>
+  <section id="conteudos"><div class="wrap"><div class="section-head"><h2>Conteúdos para entender avaliação rural.</h2><p>Uma base educativa para produtores, associações e técnicos compreenderem a lógica da valoração.</p></div><div class="articles"><article class="article"><small>VTN</small><h3>O que é Valor da Terra Nua?</h3><p>Entenda o papel do VTN na avaliação rural e por que ele precisa ser interpretado com critério técnico.</p></article><article class="article"><small>CAR/SICAR</small><h3>Como o CAR ajuda na leitura territorial?</h3><p>O cadastro ambiental organiza áreas, restrições e camadas que influenciam a análise do imóvel.</p></article><article class="article"><small>Laudo rural</small><h3>Quando um laudo rural é útil?</h3><p>Valoração, garantia, planejamento, negociação e governança técnica são usos recorrentes.</p></article></div></div></section>
+  <section id="contato"><div class="wrap"><div class="cta"><div><h2>Comece pela jornada técnica.</h2><p>Entre no sistema, teste a leitura das bases e acompanhe a evolução do e-SISLAUDO.</p></div><div style="text-align:right"><a class="btn" href="https://jamtavares-e-sislaudo-app-iys9ll.streamlit.app/" target="_blank" rel="noopener">Entrar no sistema</a></div></div></div></section>
+</main>
+<footer><div class="wrap foot"><div>© <span id="year"></span> e-SISLAUDO. Todos os direitos reservados.</div><div>Plataforma técnica em evolução contínua.</div></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
