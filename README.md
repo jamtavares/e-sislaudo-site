@@ -1,19 +1,24 @@
-# e-SISLAUDO — Site institucional
-
-Site estático inicial do e-SISLAUDO.
+# e-SISLAUDO — Identidade visual v1
 
 ## Arquivos
 
-- `index.html` — página inicial completa.
+- `index.html` — site atualizado com a marca.
+- `assets/logo-e-sislaudo.svg` — logo horizontal completa.
+- `assets/wordmark-e-sislaudo.svg` — marca compacta para cabeçalho.
+- `assets/favicon.svg` — ícone do navegador.
 
-## Publicação
+## Como atualizar no GitHub Pages
 
-Pode ser publicado em GitHub Pages, Vercel, Netlify, Cloudflare Pages ou hospedagem comum.
+1. Entre no repositório do site.
+2. Faça upload da pasta `assets/`.
+3. Substitua o `index.html` atual por este novo `index.html`.
+4. Commit changes.
+5. Aguarde o GitHub Pages republicar.
 
-## Botão do app
+## Cores oficiais
 
-O botão "Entrar no sistema" aponta para:
-
-https://jamtavares-e-sislaudo-app-iys9ll.streamlit.app/
-
-Se o endereço do app mudar, substitua esse link no `index.html`.
+- Verde técnico: `#0F766E`
+- Verde profundo: `#14532D`
+- Destaque técnico: `#B45309`
+- Fundo claro: `#F7FAF8`
+- Texto principal: `#10231C`
