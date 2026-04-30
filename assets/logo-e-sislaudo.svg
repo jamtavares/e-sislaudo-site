@@ -1,0 +1,20 @@
+<svg width="720" height="180" viewBox="0 0 720 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="180" rx="28" fill="#F7FAF8"/>
+  <g transform="translate(42 30)">
+    <rect x="0" y="0" width="120" height="120" rx="28" fill="url(#g)"/>
+    <path d="M30 38 L60 22 L92 38 L92 78 L60 98 L30 78 Z" fill="none" stroke="white" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M43 55 H77" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    <path d="M43 72 H68" stroke="white" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="92" cy="38" r="8" fill="#B45309"/>
+  </g>
+  <g transform="translate(195 47)">
+    <text x="0" y="45" font-family="Inter, Arial, sans-serif" font-size="54" font-weight="800" letter-spacing="-2" fill="#10231C">e-SISLAUDO</text>
+    <text x="2" y="83" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500" fill="#5B6B64">Plataforma técnica de avaliação rural</text>
+  </g>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,16 @@
+<svg width="420" height="80" viewBox="0 0 420 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <rect x="0" y="6" width="68" height="68" rx="18" fill="url(#g)"/>
+    <path d="M17 26 L34 16 L52 26 L52 48 L34 60 L17 48 Z" fill="none" stroke="white" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M25 34 H44" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <path d="M25 43 H39" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="52" cy="26" r="5" fill="#B45309"/>
+  </g>
+  <text x="86" y="49" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="-1.5" fill="#10231C">e-SISLAUDO</text>
+  <defs>
+    <linearGradient id="g" x1="0" y1="6" x2="68" y2="74" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+</svg>
